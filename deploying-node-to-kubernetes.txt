@@ -1,0 +1,7 @@
+$ kubectl create -f deployment.yml                                                                                                 ✔  minikube ⎈
+deployment.apps/nodeapp-deployment created
+
+$ kubectl create -f service.yml                                                                                                    ✔  minikube ⎈
+service/nodeapp-service created
+
+$ minikube service nodeapp-service

@@ -1,0 +1,12 @@
+Command
+
+$ docker run -u 0 --privileged --name jenkins -it -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
+
+$ docker logs -f [container_id]
+
+After logging into Jenkins, install the following plugins:
+
+1. Docker Pipeline plugin
+2. Kubernetes Plugin (Given in the project) 
+
+3. Jenkins File https://github.com/shazforiot/Jenkins-integration-with-kubernetes
